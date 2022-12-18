@@ -1,0 +1,56 @@
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.img-login{
+    width: 600px;
+}
+
+.cont {
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 35px  rgba(160, 160, 160, 0.355);
+    
+}
+p{
+    color:gray;
+}
+.nav1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #c84b5a
+}
+.wrap1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.w2{
+    width: 1500px;
+    margin-right: 300px;
+}
+
+
+
+
+
+
+.labels {
+    font-size: 14px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
+
