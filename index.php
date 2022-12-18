@@ -1,3 +1,48 @@
+<?php
+$con = new mysqli('localhost','root','','auction');
+
+
+if (!$con) 
+{
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+
+session_start();
+if(isset($_POST['submit2']))
+{
+            $username1=mysqli_real_escape_string($con,$_POST['username1']);
+            $password1=mysqli_real_escape_string($con,$_POST['password1']);
+            $a = "SELECT * FROM `users` WHERE username = '".$username1."'";
+            $res = mysqli_query($con, $a);
+            $row=mysqli_fetch_assoc($res);
+            $user = $row['username'];
+            $password = $row['password'];
+            
+            if(mysqli_num_rows($res)>0)
+            {
+                if(password_verify($password1, $password)){
+                  $_SESSION['IS_LOGIN']=true;
+                    $_SESSION['username']=$row['username'];
+                    $flag=0;
+                    sleep(1);
+                    header('location:home.php');
+                }
+                else
+                {
+                    
+                  echo "<script>alert('Please enter correct username and password');</script>";
+                }
+                    
+                    
+               
+            }
+           
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +65,7 @@
       <title>Auction Zone Login</title>
   </head>
 <body> 
-  <nav class="h3 p-3 mx-4 text-danger"><b>AUCTION <span style="color: gray;">ZONE</span></b></nav>
+  <center><nav class="h3 p-3 mx-4 text-danger" style="letter-spacing: 2px;"><b>AUCTION <span style="color: gray;">ZONE</span></b></nav></center>
 <div class="nav1">
     <ul class="nav nav-pills mb-3" id="ex1" role="tablist">
         <li class="nav-item bg " role="presentation">
@@ -61,9 +106,9 @@
         <span class="text-dark"><center>Convert your Store to an Online Auction Site. Add unlimited auctions <br> and attract more visitors.</center></span>
       </div>
     <div class="cont">
-        <form action="login.php" method="post"> <br>
+        <form action="index.php" method="post"> <br>
             <h2>LOGIN</h2>
-            <p>Enter credentials to login to your account</p> <br>
+            <p>Enter credentials to login to your account</p><br> 
             <div class="form-outline">
                 <input type="text" required id="form12 validationCustomUsername" name="username1" style="width: 400px;" class="form-control" />
                 <label class="form-label" for="form12">Username</label>
@@ -72,11 +117,27 @@
                 <input type="password" name="password1" required id="form12" class="form-control" />
                 <label class="form-label" for="form12">Password</label>
               </div><br>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                <label class="form-check-label" for="flexCheckDefault">Remember Login</label>
-              </div> <br>
-              <button type="submit" name="submit2" class="btn btn-danger">LOGIN</button><br>
+              <button type="submit" name="submit2" class="btn btn-danger btn-block my-2 mb-4">LOGIN</button>
+              <div class="text-center">
+ 
+    <p>or sign up with:</p>
+    <button type="button" class="btn btn-secondary  btn-floating mx-1">
+      <i class="fab fa-facebook-f"></i>
+    </button>
+
+    <button type="button" class="btn btn-secondary btn-floating mx-1">
+      <i class="fab fa-google"></i>
+    </button>
+
+    <button type="button" class="btn btn-secondary btn-floating mx-1">
+      <i class="fab fa-twitter"></i>
+    </button>
+
+    <button type="button" class="btn btn-secondary btn-floating mx-1">
+      <i class="fab fa-github"></i>
+    </button>
+  </div>
+              
         </form>
     </div>
 
@@ -98,14 +159,14 @@
                     <label class="form-label" for="form12">Email</label>
                   </div> <br>
                   <div class="form-outline">
-                    <input type="password" id="form12" class="form-control" />
+                    <input type="password" id="form12" class="form-control pass12" />
                     <label class="form-label" for="form12">Create password</label>
                   </div><br>
                   <div class="form-outline">
-                    <input type="password" id="form12" name="password" class="form-control" />
+                    <input type="password" id="form12" name="password" class="form-control pass13" />
                     <label class="form-label" for="form12">Re-enter password</label>
                   </div><br>
-                  <button type="submit" name="submit1" class="btn btn-danger">SIGN UP</button><br>
+                  <button type="submit" name="submit1" class="btn btn-danger reg_btn">SIGN UP</button><br>
             </form>
         </div>
         <div><img src="assets/3.png" class="img-login" alt="">
@@ -123,6 +184,7 @@
     
     
     <?php include "footer.php"; ?>
+
     <script
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"

@@ -53,13 +53,38 @@
             while($details = mysqli_fetch_assoc($result_products)):
                     ?>
                     <center>
-                    <div class="conatiner">
-                    <span><b class="text-danger">Product : </b><?php echo $details['product']; ?></span><br><br>
-                        <span><b class="text-danger">Mobile : </b><?php echo $details['mobile']; ?></span><br><br>
-                        <span><b class="text-danger">Address : </b><?php echo $details['adrs']; ?></span><br><br>
-                        <span><b class="text-danger">Payment : </b><?php echo $details['payment']; ?></span> <br><br>
-                        <span><b class="text-danger">Seller : </b><?php echo $details['seller']; ?></span><br><br>
-                    </div>
+                    <div class="conatiner mx-5" style="width: 700px;">
+                      <table class="table table-striped table-hover">
+                        <tbody>
+                          <tr>
+                            <td scope="row"><b>Product :</b></td>
+                            <td><?php echo $details['product']; ?></td>
+                          </tr>
+                          <tr>
+                            <td scope="row"><b>Mobile :</b></td>
+                            <td><?php echo $details['mobile']; ?></td>
+                          </tr>
+                          <tr>
+                            <td scope="row"><b>Address :</b></td>
+                            <td><?php echo $details['adrs']; ?></td>
+                          </tr>
+                          <tr>
+                            <td scope="row"><b>Payment :</b></td>
+                            <td><?php echo $details['payment']; ?></td>
+                          </tr>
+                          <tr>
+                            <td scope="row"><b>Seller :</b></td>
+                            <td><?php echo $details['seller']; ?></td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    <!-- <span><b class="text-danger">Product : </b><?php #echo $details['product']; ?></span><br><br>
+                        <span><b class="text-danger">Mobile : </b><?php #echo $details['mobile']; ?></span><br><br>
+                        <span><b class="text-danger">Address : </b><?php #echo $details['adrs']; ?></span><br><br>
+                        <span><b class="text-danger">Payment : </b><?php #echo $details['payment']; ?></span> <br><br>
+                        <span><b class="text-danger">Seller : </b><?php #echo $details['seller']; ?></span><br><br>
+                    </div> -->
                     </center>
                      <?php
                 
@@ -70,9 +95,9 @@
         
 
                 
-     ?>
+     ?> <br>
 </div>
-
+<br><br>
 
 
 
