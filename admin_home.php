@@ -149,9 +149,17 @@ body {
 
   <center><img src="assets/99.svg" class="img-fluid w-50 p-5"  alt=""> <br>
 Convert your Store to an Online Auction Site. Add unlimited auctions <br> and attract more visitors.</center>
-  
+  <br><br>
 
   </div>
+  <footer class="bg-danger text-center text-light text-lg-start">
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright:
+    <a class="text-light" href="https://mdbootstrap.com/">bijoyanil74@gmail.com</a>
+  </div>
+
+</footer>
 </main>
 
 

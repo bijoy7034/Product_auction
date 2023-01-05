@@ -68,14 +68,14 @@ if($loggedin_session==NULL) {
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
-        <li class="nav-item">
+      <ul class="navbar-nav mb-2 ml-5 mb-lg-0 ms-auto">
+        <li class="nav-item mx-4">
           <a class="nav-link text-light" aria-current="page" href="home.php">Home</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item  mx-4">
           <a class="nav-link text-light" href="sell.php">Add Product</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item  mx-4">
           <a class="nav-link text-light " href="account.php">Account</a>
         </li>
 
