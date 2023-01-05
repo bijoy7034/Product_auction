@@ -30,8 +30,7 @@ if(isset($_POST['submit2']))
                 }
                 else
                 {
-                    
-                  echo "<script>alert('Please enter correct username and password');</script>";
+                  header("location:google.com");
                 }
                     
                     
@@ -110,7 +109,7 @@ if(isset($_POST['submit2']))
             <h2>LOGIN</h2>
             <p>Enter credentials to login to your account</p><br> 
             <div class="form-outline">
-                <input type="text" required id="form12 validationCustomUsername" name="username1" style="width: 400px;" class="form-control" />
+                <input type="email" required id="form12 validationCustomUsername" name="username1" style="width: 400px;" class="form-control" />
                 <label class="form-label" for="form12">Username</label>
               </div> <br>
               <div class="form-outline">

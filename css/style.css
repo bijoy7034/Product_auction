@@ -1,6 +1,8 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nunito:ital,wght@0,200;0,300;1,400;1,500&family=Quicksand:wght@400;600&family=Roboto:wght@500&display=swap');
+
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Quicksand;
   font-weight: 400;
   color: #333;
 }
@@ -669,7 +671,7 @@ textarea.input {
   bottom: 0;
   left: 0px;
   width: 60%;
-  background: #df2c4a;
+  background:#dd3753;
   opacity: 0.9;
   -webkit-transform: skewX(-45deg);
   -ms-transform: skewX(-45deg);
@@ -683,7 +685,7 @@ textarea.input {
   bottom: 0;
   left: 1px;
   width: 100%;
-  background: #df2c4a;
+  background: #dd3753;
   opacity: 0.9;
   -webkit-transform: skewX(-45deg) translateX(-100%);
   -ms-transform: skewX(-45deg) translateX(-100%);

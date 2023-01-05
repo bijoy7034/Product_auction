@@ -90,10 +90,10 @@
               <a href="#!" class="text-white">Products</a>
             </li>
             <li>
-              <a href="#!" class="text-white">Profile</a>
+              <a href="admin.php" class="text-white">Admin</a>
             </li>
             <li>
-              <a href="#!" class="text-white">Policies</a>
+              <a href="index.php" class="text-white">Login</a>
             </li>
           </ul>
         </div>

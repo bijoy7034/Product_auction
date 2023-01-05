@@ -74,9 +74,9 @@ if($loggedin_session==NULL) {
                 <b>AUCTION ZONE</b>
               </a>
               <div class="navbar-nav ms-auto">
-                  <a class="nav-link active" aria-current="page" href="home.php">Home</a>
-                  <a class="nav-link active" href="sell.php">Add Product</a>
-                  <a class="nav-link active" href="account.php">Account</a>
+                  <a class="nav-link active mx-3" aria-current="page" href="home.php">Home</a>
+                  <a class="nav-link active  mx-3" href="sell.php">Add Product</a>
+                  <a class="nav-link active  mx-3" href="account.php">Account</a>
                   <button type="button" class="btn btn-outline-light btn-sm mx-3" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
                   Logout</button>
                   
@@ -103,7 +103,15 @@ if($loggedin_session==NULL) {
         Are you sure you want to logout?</div>
       <div class="modal-footer">
         <button type="button" class="btn btn-light" data-mdb-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-danger"><a style="color: white;" href="index.php">Logut</a></button>
+        <form action="home.php" method="post">
+        <button type="submit" name="logout" class="btn btn-danger">Logut</button>
+        </form>
+        <?php
+        if(isset($_POST['logout'])){
+          session_destroy();
+          header("location:index.php");
+        }
+        ?>
       </div>
     </div>
   </div>
@@ -128,9 +136,9 @@ if($loggedin_session==NULL) {
         <div
           id="intro-example"
           class="p-5 text-center bg-image"
-          style="background-image: url('assets/bg (2).jpg');"
+          style="background-image: url('assets/bg.jpg');"
         >
-          <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.5);">
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white">
                 <h1 class="mb-3"><b class="text-danger">BEST AUCTIONS LIKE NONE...</b></h1>
@@ -201,6 +209,102 @@ overflow: hidden;" src="<?php echo $products['img'] ?>" alt="Card image cap">
   <button class="btn btn-danger">Learn More..</button>
   </div> -->
 </div> <br>
+<template>
+    <div class="back container-fluid slide2 d-flex-column justify-content-center ">
+        <div>
+            <h4 class="mb-2  text-center" style=" font-weight: 700; font-size: 50px; color:#FFFFFF">What They Say
+                About
+                Us:</h4>
+        </div>
+
+        <div class="container">
+            <div class="d-flex flex-row justify-content-center" style="overflow-x: auto;">
+                <div class=" gx-0 m-1">
+                    <div class="card" style="width: 365px;     border: 0px; ">
+                        <div class="card-body text-center" style="padding:0px; ">
+                            <img src="https://utioutll.sirv.com/Immortal%20Gaming/8_1.png" style="width: 300px;" class="" alt="...">
+                            <div class="in" style="    padding: 17px;            ">
+                                <h5 class="card-title fw-bold text-light">It is value for money, best sound
+                                    especially
+                                    bass"</h5>
+                                <p class="card-text py-4 fw-bold text-light">SAREN MOHIL</p>
+                                <a href="#" class="badge rounded-pill px-4  py-2 bg-light text-dark">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="  gx-0 m-1">
+                    <div class="card" style="width: 365px;     border: 0px; ">
+                        <div class="card-body text-center" style="padding:0px; ">
+                            <img src="https://utioutll.sirv.com/Immortal%20Gaming/8_2.png" style="width: 300px;" class="" alt="...">
+                            <div class="in" style="    padding: 17px;            ">
+                                <h5 class="card-title fw-bold text-light">"The battery backup is something
+                                    unbelievable"
+                                </h5>
+                                <p class="card-text py-4 fw-bold text-light">Namshad K N</p>
+                                <a href="#" class="badge rounded-pill px-4  py-2 bg-light text-dark">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" gx-0 m-1">
+                    <div class="card" style="width: 365px;     border: 0px; ">
+                        <div class="card-body text-center" style="padding:0px; ">
+                            <img src="https://utioutll.sirv.com/Immortal%20Gaming/8_3.png" style="width: 300px;" class=" " alt="...">
+                            <div class="in" style="    padding: 14.4px;            ">
+                                <h5 class="card-title fw-bold text-light">"Amazing product, great sound quality and
+                                    the
+                                    mic performance is also awesome."</h5>
+                                <p class="card-text py-3 fw-bold text-light">Ashith</p>
+                                <a href="#" class="badge rounded-pill px-4  py-2 bg-light text-dark">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+
+
+     
+
+        
+    </div>
+</template>
+<script>
+
+export default ({
+   name:'productreview'
+})
+</script>
+
+<style  >
+
+.slide2 .card {
+  background: linear-gradient(
+    to bottom,
+    #000 0,
+    #000 30%,
+    #eb2128 30%,
+    #eb2128 100%
+  );
+  padding: 0px;
+}
+
+.slide2 .col {
+  flex: 0 0 0%;
+}
+
+.slide2 .col.gx-0 {
+  padding: 8px;
+}
+
+</style>
+
+
+
+
 <center><h2><b><span class="text-danger">CUSTOMER</span> REVIEWS</b></h2></center><br>
 <div class="container p-5">
   <p>Don't take it from us - see what our customers have to say</p>

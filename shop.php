@@ -97,8 +97,13 @@ if($loggedin_session==NULL) {
 							<h3 class="aside-title">Categories</h3>
 							<div class="checkbox-filter">
 
+							<?php $fil = $_GET['filter']; ?>
 							<div class="input-checkbox">
-									<input type="radio" checked value="none" id="category-1" name="cat">
+									<input type="radio" <?php
+									if($fil == 'none'){
+										echo "checked";
+									}
+									?> value="none" id="category-1" name="cat">
 									<label for="category-1">
 										<span></span>
 										All
@@ -106,7 +111,12 @@ if($loggedin_session==NULL) {
 									</label>
 								</div>
 								<div class="input-checkbox">
-									<input type="radio" value="electronics" id="category-1" name="cat">
+									<input type="radio" 
+									<?php 
+									if($fil == 'electronics'){
+										echo "checked";
+									}
+									?> value="electronics" id="category-1" name="cat">
 									<label for="category-1">
 										<span></span>
 										Electronics
@@ -115,7 +125,11 @@ if($loggedin_session==NULL) {
 								</div>
 
 								<div class="input-checkbox">
-									<input type="radio" value="books" id="category-2" name="cat">
+									<input type="radio" <?php
+									if($fil == 'books'){
+										echo "checked";
+									}
+									?>  value="books" id="category-2" name="cat">
 									<label for="category-2">
 										<span></span>
 										Books
@@ -124,7 +138,12 @@ if($loggedin_session==NULL) {
 								</div>
 
 								<div class="input-checkbox">
-									<input type="radio" value="music" id="category-3" name="cat">
+									<input type="radio"<?php
+									if($fil == 'music'){
+										echo "checked";
+									}
+									?> 
+									 value="music" id="category-3" name="cat">
 									<label for="category-3">
 										<span></span>
 										Music
@@ -133,7 +152,11 @@ if($loggedin_session==NULL) {
 								</div>
 
 								<div class="input-checkbox">
-									<input type="radio" value="sports" id="category-4" name="cat">
+									<input type="radio"<?php
+									if($fil == 'sports'){
+										echo "checked";
+									}
+									?>  value="sports" id="category-4" name="cat">
 									<label for="category-4">
 										<span></span>
 										Sports
@@ -142,7 +165,11 @@ if($loggedin_session==NULL) {
 								</div>
 
 								<div class="input-checkbox">
-									<input type="radio" value="mobile" id="category-5" name="cat">
+									<input type="radio" <?php
+									if($fil == 'mobile'){
+										echo "checked";
+									}
+									?>  value="mobile" id="category-5" name="cat">
 									<label for="category-5">
 										<span></span>
 										Mobiles
@@ -151,7 +178,11 @@ if($loggedin_session==NULL) {
 								</div>
 
 								<div class="input-checkbox">
-									<input type="radio" value="others" id="category-6" name="cat">
+									<input type="radio" <?php
+									if($fil == 'others'){
+										echo "checked";
+									}
+									?>  value="others" id="category-6" name="cat">
 									<label for="category-6">
 										<span></span>
 										Others

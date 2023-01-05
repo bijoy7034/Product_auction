@@ -13,9 +13,18 @@
     padding: 30px;
     border-radius: 20px;
     box-shadow: 10px 10px 35px  rgba(160, 160, 160, 0.355);
+    transition: box-shadow 0.5s;
     
 }
 .cont:hover {
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 35px  rgba(182, 42, 42, 0.355);
+    
+}
+.cont:focus {
     background-color: rgb(255, 255, 255);
     width: fit-content;
     padding: 30px;
