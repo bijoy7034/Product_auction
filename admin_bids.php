@@ -136,7 +136,7 @@ if($result_products):
         <div class="d-flex align-items-center">
         <i class="fas fa-user" style="width: 20px;"></i>
           <div class="ms-3">
-            <p class="fw-bold mb-1"><?php echo $products['Seller'] ?></p>
+            <p class="fw-bold mb-1"><?php echo $products['seller'] ?></p>
           </div>
         </div>
       </td>
